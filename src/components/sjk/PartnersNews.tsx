@@ -9,7 +9,7 @@ const ROWS = [
 
 export function PartnersNews() {
   return (
-    <section id="partners" className="bg-[var(--warm-white)] py-28">
+    <section id="partners" className="bg-[var(--warm-white)] py-24">
       <div className="mx-auto max-w-[1280px] px-8">
         {/* Partners */}
         <div className="max-w-3xl">
@@ -24,11 +24,11 @@ export function PartnersNews() {
           </h2>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 border-l border-t border-[var(--border)] md:grid-cols-5">
+        <div className="mt-8 grid grid-cols-2 border-l border-t border-[var(--border)] md:grid-cols-5">
           {PARTNERS.map((p) => (
             <div
               key={p}
-              className="border-b border-r border-[var(--border)] px-5 py-7 text-center font-display text-lg text-[var(--charcoal)]/70 transition hover:bg-white hover:text-[var(--ink)]"
+              className="border-b border-r border-[var(--border)] px-5 py-6 text-center font-display text-lg text-[var(--charcoal)]/70 transition hover:bg-white hover:text-[var(--ink)]"
             >
               {p}
             </div>
@@ -36,7 +36,7 @@ export function PartnersNews() {
         </div>
 
         {/* News */}
-        <div id="news" className="mt-24 max-w-3xl">
+        <div id="news" className="mt-20 max-w-3xl">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-8 bg-[var(--brand-red)]" />
             <span className="text-[11px] font-medium uppercase tracking-[0.3em] text-[var(--charcoal)]/60">
@@ -52,27 +52,30 @@ export function PartnersNews() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-2">
           <article className="group">
-            <div className="overflow-hidden">
+            <div className="relative overflow-hidden">
               <img
                 src={newsImg}
                 alt="Featured OOH article"
                 loading="lazy"
                 width={1280}
                 height={800}
-                className="h-[340px] w-full object-cover transition duration-700 group-hover:scale-105"
+                className="h-[320px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
+              <div className="absolute left-4 top-4 rounded-full bg-black/55 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white backdrop-blur">
+                Featured
+              </div>
             </div>
-            <div className="mt-6 text-[10px] uppercase tracking-[0.25em] text-[var(--brand-red)]">
+            <div className="mt-5 text-[10px] font-semibold uppercase tracking-[0.25em] text-[var(--brand-red)]">
               Featured · OOH Trend
             </div>
-            <h3 className="mt-3 font-display text-2xl font-light leading-snug text-[var(--ink)] md:text-3xl">
+            <h3 className="mt-3 font-display text-2xl font-light leading-snug text-[var(--ink)] md:text-[28px]">
               Xu hướng quảng cáo ngoài trời trong kỷ nguyên dữ liệu và màn hình số
             </h3>
             <a
               href="#"
-              className="mt-5 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[var(--ink)]"
+              className="mt-4 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[var(--ink)]"
             >
               Đọc bài viết
               <span aria-hidden>→</span>
@@ -84,7 +87,7 @@ export function PartnersNews() {
               <a
                 href="#"
                 key={n}
-                className="group flex items-start gap-6 border-t border-[var(--border)] py-7 last:border-b"
+                className="group flex items-start gap-6 border-t border-[var(--border)] py-6 last:border-b"
               >
                 <span className="font-display text-xl text-[var(--charcoal)]/40">{n}</span>
                 <div className="flex-1">
@@ -102,7 +105,7 @@ export function PartnersNews() {
             ))}
             <a
               href="#"
-              className="mt-8 inline-flex items-center gap-2 self-start text-[12px] font-semibold uppercase tracking-[0.2em] text-[var(--ink)]"
+              className="mt-6 inline-flex items-center gap-2 self-start text-[12px] font-semibold uppercase tracking-[0.2em] text-[var(--ink)]"
             >
               Xem tất cả tin tức <span aria-hidden>→</span>
             </a>
