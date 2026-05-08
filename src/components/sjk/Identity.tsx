@@ -18,14 +18,14 @@ export function Identity() {
               Về SJK Group
             </span>
           </div>
-          <h2 className="font-display text-[44px] font-light leading-[1.05] text-[var(--ink)] md:text-[58px]">
-            Một hệ sinh thái truyền thông ngoài trời kết nối{" "}
+          <h2 className="font-display text-[44px] font-light leading-[1.08] text-[var(--ink)] md:text-[56px]">
+            Một hệ sinh thái OOH kết nối <br className="hidden md:block" />
             <span className="italic text-[var(--brand-red)]">thương hiệu</span>, vị trí và công nghệ.
           </h2>
-          <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-[var(--charcoal)]/75">
-            SJK Group là công ty mẹ định hướng và kết nối các đơn vị thành viên trong một
-            hệ sinh thái OOH hiện đại, nơi mỗi doanh nghiệp đảm nhiệm một vai trò riêng
-            trong chuỗi giá trị truyền thông đô thị.
+          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[var(--charcoal)]/75">
+            SJK Group định hướng và kết nối các công ty thành viên trong một hệ sinh thái
+            truyền thông ngoài trời hiện đại — mỗi đơn vị giữ một vai trò riêng trong
+            chuỗi giá trị OOH.
           </p>
         </div>
 
