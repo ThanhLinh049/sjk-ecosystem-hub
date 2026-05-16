@@ -27,8 +27,10 @@ export function ContactFooter() {
             <span className="italic text-[var(--brand-red)]">truyền thông</span> ngoài trời.
           </h2>
           <p className="mt-5 max-w-xl text-[14.5px] leading-relaxed text-white/85">
-            Kết nối với chúng tôi để hợp tác khai thác vị trí quảng cáo, triển khai chiến
-            dịch thương hiệu hoặc tìm hiểu hệ sinh thái thành viên của SJK Group.
+            Liên hệ Hotline <span className="text-white">0933 15 99 88</span> hoặc{" "}
+            <span className="text-white">info@sjkgroup.vn</span> để hợp tác khai thác vị
+            trí quảng cáo, triển khai chiến dịch thương hiệu hoặc tìm hiểu hệ sinh thái
+            thành viên của SJK Group.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a
@@ -50,8 +52,12 @@ export function ContactFooter() {
           <div>
             <div className="font-display text-2xl">SJK <span className="text-[var(--brand-red)]">.</span></div>
             <p className="mt-3 text-[12px] leading-relaxed text-white/70">
-              Tập đoàn truyền thông ngoài trời thế hệ mới.
+              Tập đoàn quảng cáo ngoài trời tích hợp hàng đầu Việt Nam.
             </p>
+            <ul className="mt-5 space-y-1.5 text-[12px] text-white/85">
+              <li>Hotline: <span className="text-white">0933 15 99 88</span></li>
+              <li>Email: <span className="text-white">info@sjkgroup.vn</span></li>
+            </ul>
           </div>
           <div>
             <div className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/60">Group</div>
@@ -63,18 +69,35 @@ export function ContactFooter() {
           </div>
           <div>
             <div className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/60">Members</div>
-            <ul className="mt-4 space-y-2 text-[13px] text-white/90">
+            <ul className="mt-4 grid grid-cols-1 gap-2 text-[13px] text-white/90">
               {MEMBERS.map((m) => (
                 <li key={m.id}><a href="#ecosystem" className="hover:text-[var(--brand-red)]">{m.name}</a></li>
               ))}
             </ul>
           </div>
           <div>
-            <div className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/60">Contact</div>
-            <ul className="mt-4 space-y-2 text-[13px] text-white/90">
-              <li>Hotline: 0933 15 99 88</li>
-              <li>Email: info@sjkgroup.vn</li>
-              <li>Vietnam — Asia</li>
+            <div className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/60">Văn phòng</div>
+            <ul className="mt-4 space-y-3 text-[12.5px] leading-relaxed text-white/85">
+              <li>
+                <div className="text-white/55 text-[10px] uppercase tracking-[0.22em]">Trụ sở chính</div>
+                Số 80, Đường 17, KP5, P. Bình Trưng, TP. HCM
+              </li>
+              <li>
+                <div className="text-white/55 text-[10px] uppercase tracking-[0.22em]">Hà Nội</div>
+                Tầng 10, Số 5 Điện Biên Phủ, P. Ba Đình
+              </li>
+              <li>
+                <div className="text-white/55 text-[10px] uppercase tracking-[0.22em]">Đà Nẵng</div>
+                Tầng 7, 30 Nguyễn Hữu Thọ, P. Hải Châu
+              </li>
+              <li>
+                <div className="text-white/55 text-[10px] uppercase tracking-[0.22em]">Cần Thơ</div>
+                153Q Trần Hưng Đạo, P. Ninh Kiều
+              </li>
+              <li>
+                <div className="text-white/55 text-[10px] uppercase tracking-[0.22em]">Hải Phòng</div>
+                292 Lê Lợi, P. Gia Viên
+              </li>
             </ul>
           </div>
         </div>
