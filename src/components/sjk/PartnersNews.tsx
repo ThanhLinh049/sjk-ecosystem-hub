@@ -2,9 +2,8 @@ import newsImg from "@/assets/sjk-news.jpg";
 import { PARTNERS } from "./data";
 
 const ROWS = [
-  ["01", "Trend", "Vai trò của LED ngoài trời trong chiến dịch thương hiệu"],
-  ["02", "Retail", "Khai thác mặt bằng quảng cáo: cơ hội cho chuỗi cửa hàng"],
-  ["03", "Urban Media", "Hệ sinh thái OOH và tương lai truyền thông đô thị"],
+  ["02", "Đổi mới sáng tạo", "Inno X Event xuất sắc giành giải thưởng Inno Culture 2024 từ Sở KH&CN."],
+  ["03", "Trách nhiệm xã hội", "Đồng hành cùng Công an TP.HCM lan tỏa chiến dịch “Không một mình” phòng chống tội phạm."],
 ];
 
 export function PartnersNews() {
@@ -20,35 +19,45 @@ export function PartnersNews() {
             </span>
           </div>
           <h2 className="font-display text-[36px] font-light leading-[1.1] text-[var(--ink)] md:text-[44px]">
-            Đồng hành cùng nhiều thương hiệu trong các chiến dịch truyền thông ngoài trời.
+            Đồng hành cùng hàng trăm thương hiệu hàng đầu.
           </h2>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 border-l border-t border-[var(--border)] md:grid-cols-5">
-          {PARTNERS.map((p) => (
-            <div
-              key={p}
-              className="border-b border-r border-[var(--border)] px-5 py-6 text-center font-display text-lg text-[var(--charcoal)]/70 transition hover:bg-white hover:text-[var(--ink)]"
-            >
-              {p}
-            </div>
-          ))}
+        <div
+          className="mt-10 overflow-hidden border-y border-[var(--border)] py-2"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          }}
+        >
+          <div className="flex w-max animate-[marquee_45s_linear_infinite] gap-12 py-6">
+            {[...PARTNERS, ...PARTNERS].map((p, i) => (
+              <span
+                key={`${p}-${i}`}
+                className="shrink-0 font-display text-xl text-[var(--charcoal)]/65 transition hover:text-[var(--ink)] md:text-2xl"
+              >
+                {p}
+              </span>
+            ))}
+          </div>
         </div>
+        <style>{`@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
 
         {/* News */}
         <div id="news" className="mt-20 max-w-3xl">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-8 bg-[var(--brand-red)]" />
             <span className="text-[11px] font-medium uppercase tracking-[0.3em] text-[var(--charcoal)]/60">
-              OOH Intelligence
+              Thành tựu & dấu ấn
             </span>
           </div>
           <h2 className="font-display text-[36px] font-light leading-[1.1] text-[var(--ink)] md:text-[44px]">
-            Góc nhìn thị trường, dữ liệu và xu hướng truyền thông ngoài trời.
+            Thành tựu & dấu ấn truyền thông.
           </h2>
           <p className="mt-4 max-w-2xl text-[14px] leading-relaxed text-[var(--charcoal)]/75">
-            Những phân tích và góc nhìn từ hệ sinh thái SJK Group về truyền thông đô thị,
-            màn hình số, dữ liệu OOH và chiến dịch thương hiệu.
+            Những cột mốc khẳng định vị thế và trách nhiệm cộng đồng của SJK Group.
           </p>
         </div>
 
@@ -68,10 +77,10 @@ export function PartnersNews() {
               </div>
             </div>
             <div className="mt-5 text-[10px] font-semibold uppercase tracking-[0.25em] text-[var(--brand-red)]">
-              Featured · OOH Trend
+              Giải thưởng · 2024
             </div>
             <h3 className="mt-3 font-display text-2xl font-light leading-snug text-[var(--ink)] md:text-[28px]">
-              Xu hướng quảng cáo ngoài trời trong kỷ nguyên dữ liệu và màn hình số
+              SJK Group tự hào nhận danh hiệu Doanh nghiệp tiêu biểu TP.HCM 2024.
             </h3>
             <a
               href="#"
