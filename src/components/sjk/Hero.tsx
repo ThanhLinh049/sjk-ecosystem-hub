@@ -47,33 +47,32 @@ export function Hero() {
           <div className="mb-6 flex items-center gap-3">
             <span className="h-px w-10 bg-[var(--brand-red)]" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/85">
-              Hệ sinh thái truyền thông ngoài trời
+              Khởi tạo giá trị truyền thông ngoài trời
             </span>
           </div>
-          <h1 className="font-display text-[88px] font-light leading-[0.95] tracking-tight md:text-[120px]">
+          <h1 className="font-display text-[64px] font-light leading-[0.95] tracking-tight md:text-[96px]">
             SJK <span className="italic text-[var(--brand-red)]">Group</span>
           </h1>
-          <p className="mt-6 font-display text-2xl font-light leading-snug text-white/85 md:text-3xl">
-            Tập đoàn truyền thông ngoài trời thế hệ mới
+          <p className="mt-6 font-display text-2xl font-light leading-snug text-white/90 md:text-[32px]">
+            Tập đoàn quảng cáo ngoài trời <span className="italic text-[var(--brand-red)]">tích hợp</span> hàng đầu
           </p>
           <p className="mt-5 max-w-xl text-[14.5px] leading-relaxed text-white/85">
-            SJK Group là hệ sinh thái các công ty thành viên hoạt động trong OOH Media,
-            công nghệ truyền thông, dữ liệu OOH, màn hình số, sáng tạo thương hiệu và đầu
-            tư hạ tầng quảng cáo.
+            Tiên phong ứng dụng công nghệ vào OOH, DOOH và hệ sinh thái truyền thông đa
+            điểm chạm, mang lại hiệu quả đo lường minh bạch cho thương hiệu.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a
-              href="#ecosystem"
+              href="#contact"
               className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-red)] px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-white transition hover:brightness-110"
             >
-              Khám phá hệ sinh thái
+              Liên hệ hợp tác
               <span aria-hidden>→</span>
             </a>
             <a
-              href="#contact"
+              href="#ecosystem"
               className="inline-flex items-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10"
             >
-              Liên hệ hợp tác
+              Khám phá hệ sinh thái
             </a>
           </div>
         </div>
