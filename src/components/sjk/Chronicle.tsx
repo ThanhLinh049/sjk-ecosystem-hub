@@ -1,38 +1,74 @@
+import { useEffect, useRef, useState } from "react";
+
 const MILESTONES = [
-  { year: "2017", text: "Khởi nguồn hệ sinh thái với Shojiki Ads." },
-  { year: "2019", text: "Thành lập liên doanh Adjika và Compass Tech." },
-  { year: "2023", text: "Doanh nghiệp VN đầu tiên gia nhập hội viên WOO toàn cầu." },
-  { year: "2024", text: "Chính thức ra mắt SJK Group và Inno X." },
-  { year: "2025", text: "Thành lập quỹ đầu tư OIP, mở rộng chi nhánh toàn quốc." },
+  { year: "2017", text: "Khởi nguồn hệ sinh thái với Shojiki Ads — đặt nền móng cho mạng lưới OOH chuyên biệt." },
+  { year: "2019", text: "Thành lập Compass Tech và Adjika — mở rộng năng lực công nghệ đo lường và sáng tạo." },
+  { year: "2023", text: "Doanh nghiệp Việt Nam đầu tiên gia nhập hội viên WOO toàn cầu, kết nối chuẩn mực quốc tế." },
+  { year: "2024", text: "Chính thức ra mắt SJK Group và Inno X — định danh tập đoàn truyền thông ngoài trời tích hợp." },
+  { year: "2025", text: "Thành lập quỹ đầu tư OIP, mở rộng chi nhánh toàn quốc và nâng tầm vị thế dẫn đầu." },
 ];
 
 export function Chronicle() {
+  const [active, setActive] = useState(0);
+  const refs = useRef<(HTMLLIElement | null)[]>([]);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const idx = Number((e.target as HTMLElement).dataset.idx);
+            setActive(idx);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+    );
+    refs.current.forEach((el) => el && obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <section className="bg-[#111111] py-24 text-white">
-      <div className="mx-auto max-w-[1320px] px-8">
+    <section className="bg-[#faf9f6] border-t border-[var(--charcoal)]/10 py-32">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-3xl">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-8 bg-[var(--brand-red)]" />
-            <span className="text-[11px] font-medium uppercase tracking-[0.3em] text-white/65">
-              Hành trình kiến tạo
-            </span>
+          <div className="mb-8 flex items-center gap-4 text-[#E3000F] text-xs font-semibold uppercase tracking-[0.3em]">
+            <span className="h-px w-5 bg-[#E3000F]" />
+            Hành trình kiến tạo
           </div>
-          <h2 className="font-display text-[40px] font-light leading-[1.08] md:text-[52px]">
+          <h2 className="font-display text-5xl font-light leading-[1.1] text-[#050505] lg:text-7xl">
             Tốc độ mở rộng và{" "}
-            <span className="italic text-[var(--brand-red)]">vị thế</span> dẫn đầu.
+            <span className="italic text-[#E3000F]">vị thế</span> dẫn đầu.
           </h2>
         </div>
 
-        <div className="relative mt-16 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="absolute left-0 right-0 top-[44px] h-px bg-white/15" />
-          <ol className="relative flex min-w-max gap-16 pr-8">
-            {MILESTONES.map((m) => (
-              <li key={m.year} className="w-[260px] shrink-0">
-                <div className="font-display text-2xl font-light text-white/85">{m.year}</div>
-                <div className="relative mt-4 h-3">
-                  <span className="absolute left-0 top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full bg-[var(--brand-red)] ring-4 ring-[#111111]" />
-                </div>
-                <p className="mt-5 text-[13.5px] leading-relaxed text-white/70">{m.text}</p>
+        <div className="relative mt-16 grid grid-cols-1 gap-12 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <div className="sticky top-32">
+              <div className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[var(--charcoal)]/45">
+                Niên đại
+              </div>
+              <div
+                key={MILESTONES[active].year}
+                className="font-display font-light leading-none text-[var(--charcoal)]/15 text-8xl md:text-[120px] transition-opacity duration-500"
+              >
+                {MILESTONES[active].year}
+              </div>
+            </div>
+          </div>
+
+          <ol className="md:col-span-7 space-y-32">
+            {MILESTONES.map((m, i) => (
+              <li
+                key={m.year}
+                data-idx={i}
+                ref={(el) => {
+                  refs.current[i] = el;
+                }}
+              >
+                <div className="font-display text-2xl text-[#E3000F] mb-4">{m.year}</div>
+                <div className="h-px w-full bg-[var(--charcoal)]/15 mb-6" />
+                <p className="text-xl leading-relaxed text-[var(--charcoal)]/80">{m.text}</p>
               </li>
             ))}
           </ol>

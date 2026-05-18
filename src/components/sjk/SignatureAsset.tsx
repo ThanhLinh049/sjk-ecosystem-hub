@@ -1,51 +1,56 @@
-import ifcImg from "@/assets/sjk-ifc.jpg";
+import ifcImg from "@/assets/sjk-ifc-portrait.jpg";
 
 export function SignatureAsset() {
   return (
-    <section className="relative overflow-hidden bg-[var(--ink)] text-white">
-      <div className="mx-auto max-w-[1320px] px-8 pt-24 pb-10">
-        <div className="max-w-3xl">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-8 bg-[var(--brand-red)]" />
-            <span className="text-[11px] font-medium uppercase tracking-[0.3em] text-white/70">
-              Biểu tượng đẳng cấp
-            </span>
+    <section className="bg-[#faf9f6] border-t border-[var(--charcoal)]/10 py-32">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-12">
+        <div className="lg:col-span-5">
+          <div className="mb-8 flex items-center gap-4 text-[#E3000F] text-xs font-semibold uppercase tracking-[0.3em]">
+            <span className="h-px w-5 bg-[#E3000F]" />
+            Biểu tượng đẳng cấp
           </div>
-          <h2 className="font-display text-[44px] font-light leading-[1.05] md:text-[56px]">
+          <h2 className="font-display text-5xl font-light leading-[1.1] text-[#050505] lg:text-7xl">
             Điểm nhìn trung tâm{" "}
-            <span className="italic text-[var(--brand-red)]">tài chính</span> quốc tế.
+            <span className="italic text-[#E3000F]">tài chính</span> quốc tế.
           </h2>
-          <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-white/75">
+          <p className="mt-8 max-w-md text-lg leading-relaxed text-[#050505]/70">
             Khai thác độc quyền hệ thống LED Tòa tháp Saigòn Marina IFC — biểu tượng
-            truyền thông lớn nhất Đông Nam Á với tổng diện tích hơn 39.000m².
+            truyền thông lớn nhất Đông Nam Á.
           </p>
-        </div>
-      </div>
 
-      <div className="relative">
-        <img
-          src={ifcImg}
-          alt="Saigòn Marina IFC tower LED billboard at night"
-          loading="lazy"
-          width={1920}
-          height={822}
-          className="aspect-[21/9] w-full object-cover"
-        />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--ink)] via-transparent to-transparent" />
-        <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-8 text-white">
-          <div className="text-center">
-            <div className="font-display text-3xl font-light">39.000<span className="text-[var(--brand-red)]">m²</span></div>
-            <div className="mt-1 text-[10px] uppercase tracking-[0.28em] text-white/65">Diện tích LED</div>
+          <div className="mt-12 border-t border-[var(--charcoal)]/15 pt-8">
+            <div className="flex items-baseline gap-10">
+              <div>
+                <div className="font-display text-6xl font-light tracking-tighter text-[#050505]">
+                  39.000
+                </div>
+                <div className="mt-3 text-sm uppercase tracking-widest text-[var(--charcoal)]/70">
+                  m² Màn hình LED
+                </div>
+              </div>
+              <span className="hidden h-16 w-px bg-[var(--charcoal)]/15 sm:block" />
+              <div className="hidden sm:block">
+                <div className="font-display text-6xl font-light tracking-tighter text-[#050505]">
+                  #1
+                </div>
+                <div className="mt-3 text-sm uppercase tracking-widest text-[var(--charcoal)]/70">
+                  Đông Nam Á
+                </div>
+              </div>
+            </div>
           </div>
-          <span className="h-8 w-px bg-white/25" />
-          <div className="text-center">
-            <div className="font-display text-3xl font-light">#1</div>
-            <div className="mt-1 text-[10px] uppercase tracking-[0.28em] text-white/65">Đông Nam Á</div>
-          </div>
-          <span className="h-8 w-px bg-white/25" />
-          <div className="text-center">
-            <div className="font-display text-3xl font-light">Độc quyền</div>
-            <div className="mt-1 text-[10px] uppercase tracking-[0.28em] text-white/65">Khai thác SJK</div>
+        </div>
+
+        <div className="lg:col-span-7">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm shadow-2xl shadow-black/10">
+            <img
+              src={ifcImg}
+              alt="Saigòn Marina IFC tower LED facade at blue hour"
+              loading="lazy"
+              width={1024}
+              height={1280}
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
