@@ -79,23 +79,55 @@ export function Hero() {
       </div>
 
       {/* Bottom member index */}
+      {/* Bottom member index */}
       <div className="relative z-10 border-t border-white/10 bg-black/55 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-x-8 gap-y-2 px-8 py-4">
-          <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/65">
+        <div className="mx-auto flex max-w-[1400px] items-center gap-8 px-8 py-4">
+          <span className="shrink-0 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/65">
             Member companies
           </span>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-1 text-[12px] text-white/85">
-            {MEMBERS.map((m, i) => (
-              <span key={m.id} className="flex items-center gap-6">
-                <span className="flex items-center gap-2">
-                  <span className="text-[10px] text-[var(--brand-red)]">{m.index}</span>
-                  {m.name}
-                </span>
-                {i < MEMBERS.length - 1 && <span className="text-white/20">/</span>}
-              </span>
-            ))}
+
+          <div
+            className="flex-1 overflow-hidden"
+            style={{
+              maskImage:
+                "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+            }}
+          >
+            <div className="flex w-max animate-[memberMarquee_35s_linear_infinite] items-center">
+              {[...MEMBERS, ...MEMBERS].map((m, i) => (
+                <div
+                  key={`${m.id}-${i}`}
+                  className="flex shrink-0 items-center text-[12px] text-white/85"
+                >
+                  <div className="flex items-center gap-2 transition hover:text-white">
+                    <span className="text-[10px] text-[var(--brand-red)]">
+                      {m.index}
+                    </span>
+
+                    <span className="uppercase tracking-[0.08em]">
+                      {m.name}
+                    </span>
+                  </div>
+
+                  <span className="mx-6 text-white/20">/</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
+        <style>{`
+    @keyframes memberMarquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  `}</style>
       </div>
     </section>
   );
