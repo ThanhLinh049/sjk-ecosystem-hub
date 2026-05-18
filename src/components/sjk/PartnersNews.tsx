@@ -8,7 +8,7 @@ const ROWS = [
 
 export function PartnersNews() {
   return (
-    <section id="partners" className="bg-[var(--warm-white)] py-24">
+    <section id="partners" className="bg-[#faf9f6] py-32 border-t border-[var(--charcoal)]/10">
       <div className="mx-auto max-w-[1280px] px-8">
         {/* Partners */}
         <div className="max-w-3xl">

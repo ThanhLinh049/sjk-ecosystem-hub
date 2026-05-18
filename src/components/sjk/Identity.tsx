@@ -9,7 +9,7 @@ const PROOF = [
 
 export function Identity() {
   return (
-    <section id="about" className="bg-[var(--warm-white)] py-28">
+    <section id="about" className="bg-[#faf9f6] py-32">
       <div className="mx-auto max-w-[1280px] px-8">
         <div className="max-w-3xl">
           <div className="mb-5 flex items-center gap-3">

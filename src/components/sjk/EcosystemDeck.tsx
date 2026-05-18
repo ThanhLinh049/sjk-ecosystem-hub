@@ -6,7 +6,7 @@ export function EcosystemDeck() {
   const m = MEMBERS[active];
 
   return (
-    <section id="ecosystem" className="bg-[var(--background)] py-28">
+    <section id="ecosystem" className="bg-[#faf9f6] py-32 border-t border-[var(--charcoal)]/10">
       <div className="mx-auto max-w-[1320px] px-8">
         {/* Unified intro */}
         <div className="max-w-3xl">
