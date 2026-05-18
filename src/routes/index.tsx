@@ -4,6 +4,10 @@ import { Identity } from "@/components/sjk/Identity";
 import { EcosystemDeck } from "@/components/sjk/EcosystemDeck";
 import { PartnersNews } from "@/components/sjk/PartnersNews";
 import { ContactFooter } from "@/components/sjk/ContactFooter";
+import { SignatureAsset } from "@/components/sjk/SignatureAsset";
+import { Chronicle } from "@/components/sjk/Chronicle";
+import { Touchpoints } from "@/components/sjk/Touchpoints";
+import { PdoohTech } from "@/components/sjk/PdoohTech";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -24,7 +28,11 @@ function Index() {
     <main className="bg-[var(--background)]">
       <Hero />
       <Identity />
+      <SignatureAsset />
+      <Chronicle />
       <EcosystemDeck />
+      <Touchpoints />
+      <PdoohTech />
       <PartnersNews />
       <ContactFooter />
     </main>
