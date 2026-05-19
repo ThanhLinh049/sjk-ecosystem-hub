@@ -6,7 +6,7 @@ export function EcosystemDeck() {
   const m = MEMBERS[active];
 
   return (
-    <section id="ecosystem" className="bg-[var(--background)] py-28">
+    <section id="ecosystem" className="bg-[#faf9f6] py-32 border-t border-[var(--charcoal)]/10">
       <div className="mx-auto max-w-[1320px] px-8">
         {/* Unified intro */}
         <div className="max-w-3xl">
@@ -16,9 +16,9 @@ export function EcosystemDeck() {
               Ecosystem Command Deck
             </span>
           </div>
-          <h2 className="font-display text-[44px] font-light leading-[1.05] text-[var(--ink)] md:text-[56px]">
+          <h2 className="text-[44px] leading-[1.05] text-[var(--ink)] md:text-[56px]">
             Mười một đơn vị thành viên, một hệ sinh thái{" "}
-            <span className="italic text-[var(--brand-red)]">SJK Group</span>.
+            <span className="text-[var(--brand-red)]">SJK Group</span>.
           </h2>
           <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-[var(--charcoal)]/75">
             Mỗi đơn vị thành viên đảm nhiệm một mắt xích chuyên biệt trong chuỗi giá trị
@@ -29,10 +29,10 @@ export function EcosystemDeck() {
         {/* Deck */}
         <div className="mt-14 border border-[var(--border)] bg-white shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)]">
           {/* Top row — parent company bar */}
-          <div className="relative flex items-center justify-between border-b border-[var(--border)] bg-[var(--ink)] px-7 py-5 text-white">
+          <div className="relative flex items-center justify-between border-b border-[var(--border)] bg-[var(--ink)] px-7 py-3 text-white">
             <div className="flex items-center gap-4">
               <span className="h-2 w-2 rounded-full bg-[var(--brand-red)]" />
-              <span className="font-display text-xl">SJK Group</span>
+              <span className="text-xl">SJK Group</span>
               <span className="text-[10px] uppercase tracking-[0.28em] text-white/55">
                 / Parent Company
               </span>
@@ -58,21 +58,18 @@ export function EcosystemDeck() {
                 <button
                   key={mem.id}
                   onClick={() => setActive(i)}
-                  className={`relative flex flex-col items-start gap-1 border-b border-r border-[var(--border)] px-5 py-5 text-left transition ${
-                    isActive ? "bg-white" : "bg-[var(--warm-white)] hover:bg-white"
-                  }`}
+                  className={`relative flex flex-col justify-center items-start gap-1 border-b border-r border-[var(--border)] px-4 h-[66px] w-full text-left transition ${isActive ? "bg-white" : "bg-[var(--warm-white)] hover:bg-white"
+                    }`}
                 >
                   <span
-                    className={`text-[10px] font-semibold tracking-[0.28em] ${
-                      isActive ? "text-[var(--brand-red)]" : "text-[var(--charcoal)]/45"
-                    }`}
+                    className={`text-[10px] font-semibold tracking-[0.28em] ${isActive ? "text-[var(--brand-red)]" : "text-[var(--charcoal)]/45"
+                      }`}
                   >
                     {mem.index}
                   </span>
                   <span
-                    className={`font-display text-[17px] leading-tight ${
-                      isActive ? "text-[var(--brand-red)]" : "text-[var(--ink)]"
-                    }`}
+                    className={`text-[16px] leading-tight ${isActive ? "text-[var(--brand-red)]" : "text-[var(--ink)]"
+                      }`}
                   >
                     {mem.name}
                   </span>
@@ -82,6 +79,22 @@ export function EcosystemDeck() {
                 </button>
               );
             })}
+
+            {/* CẬP NHẬT: Ô số 12 thành link Liên hệ hợp tác */}
+            <a
+              href="#contact" /* Bro thay "#contact" bằng link hoặc ID của section liên hệ nhé */
+              className="group relative flex flex-col justify-center items-start gap-1 border-b border-r border-[var(--border)] px-4 h-[66px] w-full bg-[var(--warm-white)]/30 hover:bg-white transition-colors duration-300"
+            >
+              <span className="flex items-center gap-2 text-[16px] leading-tight text-[var(--charcoal)]/40 group-hover:text-[var(--brand-red)] transition-colors duration-300">
+                Liên hệ hợp tác
+                {/* Mũi tên ẩn, chỉ hiện và trượt nhẹ khi khách lia chuột vào */}
+                <span className="inline-block transform -translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                  →
+                </span>
+              </span>
+            </a>
+            {/* ----------------------------------------------- */}
+
           </div>
 
           {/* Body */}
@@ -101,7 +114,7 @@ export function EcosystemDeck() {
                 <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
                 Connected Business Unit
               </div>
-              <div className="absolute bottom-6 left-6 font-display text-white/90">
+              <div className="absolute bottom-6 left-6 text-white/90">
                 <div className="text-[11px] uppercase tracking-[0.28em] text-white/70">{m.tag}</div>
               </div>
             </div>
@@ -112,7 +125,7 @@ export function EcosystemDeck() {
                   <span className="h-px w-6 bg-[var(--brand-red)]" />
                   Active company / {m.index}
                 </div>
-                <h3 className="mt-5 font-display text-[56px] font-light leading-[1] tracking-tight text-[var(--ink)]">
+                <h3 className="mt-5 text-[56px] font-light leading-[1] tracking-tight text-[var(--ink)]">
                   {m.name}
                 </h3>
                 <div className="mt-3 text-[12px] font-semibold uppercase tracking-[0.22em] text-[var(--brand-red)]">
@@ -135,7 +148,7 @@ export function EcosystemDeck() {
                   Truy cập website
                   <span className="inline-block h-px w-8 bg-[var(--ink)] transition-all group-hover:w-12 group-hover:bg-[var(--brand-orange)]" />
                 </a>
-                <span className="font-display text-4xl text-[var(--charcoal)]/25">
+                <span className="text-4xl text-[var(--charcoal)]/25">
                   {m.index} <span className="text-base">/ 11</span>
                 </span>
               </div>

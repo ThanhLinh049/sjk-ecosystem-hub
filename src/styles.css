@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -5,8 +7,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-serif: "Fraunces", "Cormorant Garamond", "Times New Roman", serif;
-  --font-sans: "Inter", "Helvetica Neue", system-ui, sans-serif;
+  --font-serif: "Roboto", sans-serif;
+  --font-sans: "Roboto", sans-serif;
 }
 
 /*
@@ -146,18 +148,22 @@
 
 @layer base {
   * {
-    border-color: var(--color-border);
+    border-color: var(--border);
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--background);
+    color: var(--foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
+
   .font-display {
-    font-family: var(--font-serif);
-    font-feature-settings: "ss01", "ss02";
+    font-family: var(--font-sans);
     letter-spacing: -0.015em;
+  }
+
+  .font-display span {
+    display: inline;
   }
 }

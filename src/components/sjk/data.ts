@@ -129,11 +129,11 @@ export const MEMBERS: Member[] = [
 ];
 
 export const NAV = [
-  { label: "Giới thiệu", href: "#about" },
-  { label: "Thành viên", href: "#ecosystem" },
-  { label: "Đối tác", href: "#partners" },
-  { label: "Tin tức", href: "#news" },
-  { label: "Liên hệ", href: "#contact" },
+  { label: "Trang chủ", href: "/" },
+  { label: "Giới thiệu", href: "/about" },
+  { label: "Thành viên", href: "/members" },
+  { label: "Tin tức", href: "/blog" },
+  { label: "Liên hệ", href: "/contact" },
 ];
 
 export const PARTNERS = [

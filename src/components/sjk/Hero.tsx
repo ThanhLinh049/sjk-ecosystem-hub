@@ -1,5 +1,6 @@
 import heroImg from "@/assets/sjk-hero.jpg";
-import { NAV, MEMBERS } from "./data";
+import { MEMBERS } from "./data";
+import { SiteHeader } from "./SiteHeader";
 
 export function Hero() {
   return (
@@ -15,32 +16,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/85" />
 
-      {/* Header */}
-      <header className="relative z-10 mx-auto flex max-w-[1400px] items-center justify-between px-8 py-7">
-        <a href="#" className="flex items-center gap-2">
-          <span className="font-display text-2xl tracking-tight text-white">SJK</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-red)]" />
-          <span className="text-[11px] uppercase tracking-[0.25em] text-white/70">Group</span>
-        </a>
-        <nav className="hidden items-center gap-9 md:flex">
-          {NAV.map((n) => (
-            <a
-              key={n.label}
-              href={n.href}
-              className="text-[13px] font-medium text-white/95 transition hover:text-[var(--brand-red)]"
-            >
-              {n.label}
-            </a>
-          ))}
-        </nav>
-        <a
-          href="#contact"
-          className="hidden rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.18em] text-white backdrop-blur transition hover:border-[var(--brand-red)] hover:bg-[var(--brand-red)] md:inline-block"
-        >
-          Liên hệ hợp tác
-        </a>
-      </header>
-
+      <SiteHeader />
       {/* Hero content */}
       <div className="relative z-10 mx-auto flex min-h-[calc(90vh-120px)] max-w-[1400px] flex-col justify-end px-8 pb-20">
         <div className="max-w-3xl">
@@ -50,11 +26,11 @@ export function Hero() {
               Khởi tạo giá trị truyền thông ngoài trời
             </span>
           </div>
-          <h1 className="font-display text-[64px] font-light leading-[0.95] tracking-tight md:text-[96px]">
-            SJK <span className="italic text-[var(--brand-red)]">Group</span>
+          <h1 className="text-[64px] font-medium leading-[0.95] tracking-tight md:text-[96px]">
+            SJK <span className=" text-[var(--brand-red)]">Group</span>
           </h1>
-          <p className="mt-6 font-display text-2xl font-light leading-snug text-white/90 md:text-[32px]">
-            Tập đoàn quảng cáo ngoài trời <span className="italic text-[var(--brand-red)]">tích hợp</span> hàng đầu
+          <p className="mt-6 text-2xl font-light leading-snug text-white/90 md:text-[32px]">
+            Tập đoàn quảng cáo ngoài trời <span className=" text-[var(--brand-red)]">tích hợp</span> hàng đầu
           </p>
           <p className="mt-5 max-w-xl text-[14.5px] leading-relaxed text-white/85">
             Tiên phong ứng dụng công nghệ vào OOH, DOOH và hệ sinh thái truyền thông đa
@@ -78,7 +54,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Bottom member index */}
       {/* Bottom member index */}
       <div className="relative z-10 border-t border-white/10 bg-black/55 backdrop-blur-sm">
         <div className="mx-auto flex max-w-[1400px] items-center gap-8 px-8 py-4">

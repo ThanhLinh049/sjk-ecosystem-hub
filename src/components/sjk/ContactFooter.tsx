@@ -22,9 +22,9 @@ export function ContactFooter() {
               Hợp tác cùng SJK Group
             </span>
           </div>
-          <h2 className="font-display text-[44px] font-light leading-[1.05] md:text-[56px]">
+          <h2 className="text-[44px] leading-[1.05] md:text-[56px]">
             Cùng SJK Group phát triển giá trị{" "}
-            <span className="italic text-[var(--brand-red)]">truyền thông</span> ngoài trời.
+            <span className="text-[var(--brand-red)]">truyền thông</span> ngoài trời.
           </h2>
           <p className="mt-5 max-w-xl text-[14.5px] leading-relaxed text-white/85">
             Liên hệ Hotline <span className="text-white">0933 15 99 88</span> hoặc{" "}
@@ -50,7 +50,7 @@ export function ContactFooter() {
 
         <div className="mt-16 grid grid-cols-2 gap-10 border-t border-white/15 pt-10 md:grid-cols-4">
           <div>
-            <div className="font-display text-2xl">SJK <span className="text-[var(--brand-red)]">.</span></div>
+            <div className="text-2xl">SJK <span className="text-[var(--brand-red)]">.</span></div>
             <p className="mt-3 text-[12px] leading-relaxed text-white/70">
               Tập đoàn quảng cáo ngoài trời tích hợp hàng đầu Việt Nam.
             </p>

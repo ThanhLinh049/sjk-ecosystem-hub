@@ -8,7 +8,7 @@ const ROWS = [
 
 export function PartnersNews() {
   return (
-    <section id="partners" className="bg-[var(--warm-white)] py-24">
+    <section id="partners" className="bg-[#faf9f6] py-32 border-t border-[var(--charcoal)]/10">
       <div className="mx-auto max-w-[1280px] px-8">
         {/* Partners */}
         <div className="max-w-3xl">
@@ -18,7 +18,7 @@ export function PartnersNews() {
               Đối tác & thương hiệu
             </span>
           </div>
-          <h2 className="font-display text-[36px] font-light leading-[1.1] text-[var(--ink)] md:text-[44px]">
+          <h2 className="text-[36px] leading-[1.1] text-[var(--ink)] md:text-[44px]">
             Đồng hành cùng hàng trăm thương hiệu hàng đầu.
           </h2>
         </div>
@@ -36,7 +36,7 @@ export function PartnersNews() {
             {[...PARTNERS, ...PARTNERS].map((p, i) => (
               <span
                 key={`${p}-${i}`}
-                className="shrink-0 font-display text-xl text-[var(--charcoal)]/65 transition hover:text-[var(--ink)] md:text-2xl"
+                className="shrink-0 text-xl text-[var(--charcoal)]/65 transition hover:text-[var(--ink)] md:text-2xl"
               >
                 {p}
               </span>
@@ -53,7 +53,7 @@ export function PartnersNews() {
               Thành tựu & dấu ấn
             </span>
           </div>
-          <h2 className="font-display text-[36px] font-light leading-[1.1] text-[var(--ink)] md:text-[44px]">
+          <h2 className="text-[36px] leading-[1.1] text-[var(--ink)] md:text-[44px]">
             Thành tựu & dấu ấn truyền thông.
           </h2>
           <p className="mt-4 max-w-2xl text-[14px] leading-relaxed text-[var(--charcoal)]/75">
@@ -79,7 +79,7 @@ export function PartnersNews() {
             <div className="mt-5 text-[10px] font-semibold uppercase tracking-[0.25em] text-[var(--brand-red)]">
               Giải thưởng · 2024
             </div>
-            <h3 className="mt-3 font-display text-2xl font-light leading-snug text-[var(--ink)] md:text-[28px]">
+            <h3 className="mt-5 text-2xl font-light leading-snug text-[var(--ink)] md:text-[28px]">
               SJK Group tự hào nhận danh hiệu Doanh nghiệp tiêu biểu TP.HCM 2024.
             </h3>
             <a
@@ -98,12 +98,12 @@ export function PartnersNews() {
                 key={n}
                 className="group flex items-start gap-6 border-t border-[var(--border)] py-6 last:border-b"
               >
-                <span className="font-display text-xl text-[var(--charcoal)]/40">{n}</span>
+                <span className="text-xl text-[var(--charcoal)]/40">{n}</span>
                 <div className="flex-1">
                   <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--brand-red)]">
                     {tag}
                   </div>
-                  <div className="mt-2 font-display text-xl font-light leading-snug text-[var(--ink)] transition group-hover:text-[var(--brand-red)]">
+                  <div className="mt-2 text-xl font-light leading-snug text-[var(--ink)] transition group-hover:text-[var(--brand-red)]">
                     {title}
                   </div>
                 </div>
